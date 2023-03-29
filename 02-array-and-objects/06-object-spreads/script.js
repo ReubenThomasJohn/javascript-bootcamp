@@ -1,27 +1,50 @@
-// Array Literal
+let x;
 
-const numbers = [12, 45, 33, 29, 39];
+// const todo = {};
+const todo = new Object();
 
-// Array Constructor
-const fruits = new Array('apple', 'grape', 'orange');
+// const todo1 = new todo();
 
-const mixed = [12, 'Hello', true, null];
+todo.id = 1;
+todo.name = 'Buy Milk';
+todo.completed = false;
 
-x = numbers[0];
+x = todo;
 
-x = numbers[0] + numbers[3];
+const person = {
+  address: {
+    coords: {
+      lat: 42.9384,
+      lng: -71.3232,
+    },
+  },
+};
 
-x = `My favorite fruit is ${fruits[2]}`;
+x = person.address.coords.lat;
 
-x = numbers.length;
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
 
-fruits[2] = 'pear';
+const obj3 = { obj1, obj2 };
 
-fruits[3] = 'strawberry';
+const obj4 = { ...obj1, obj2 };
+const obj5 = Object.assign({}, obj1, obj2);
 
-fruits[fruits.length] = 'blueberry';
-fruits[fruits.length] = 'peach';
+x = obj5;
 
-x = fruits;
+const todos = [
+  { id: 1, name: 'Buy Milk' },
+  { id: 2, name: 'abcd' },
+  { id: 3, name: 'Take out trash' },
+];
 
+x = todos[0].name;
+
+x = Object.keys(todo).length;
+
+x = Object.values(todo);
+
+x = Object.entries(todo);
+
+x = todo.hasOwnProperty('name');
 console.log(x);
