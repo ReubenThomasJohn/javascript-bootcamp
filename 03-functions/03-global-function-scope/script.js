@@ -20,6 +20,7 @@ if (true) {
 }
 
 function add() {
+  const x = 1;
   const y = 50;
   console.log(y, 'in function');
 }
